@@ -3,13 +3,8 @@ from collections import defaultdict
 from math import log2
 
 def word_count(words):
-  # Count the number of occurrences of each word
-  counts = Counter(words)
-
-  total_number_of_words = len(words)
-  unique_words = counts
-  # Return the number of words and the number of different words
-  return total_number_of_words,unique_words
+    # Return the total number of words, and the dictionary of unique words and their counts
+  return len(words), Counter(words)
 
 
 def calculate_word_probabilities(words):
@@ -17,10 +12,6 @@ def calculate_word_probabilities(words):
     # Calculate the relative frequency (probability) of each word
     word_probabilities = {word: count / number_of_words for word, count in word_counts.items()}
     return word_probabilities
-
-
-
-from collections import defaultdict
 
 def conditional_probabilities(bigrams):
     # Create a defaultdict to store the counts of each bigram
@@ -52,9 +43,9 @@ def conditional_probabilities(bigrams):
 
 def calculate_entropy(words):
     # Calculate the probability of each word
-    word_prob = 1 / len(words)
+    word_prob = 1 / len(set(words))
     # Calculate the entropy
-    entropy = -sum(word_prob * log2(word_prob) for word in words)
+    entropy = -sum(word_prob * log2(word_prob) for word in set(words))
     return entropy
 
 

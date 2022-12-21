@@ -1,5 +1,5 @@
 import string
-from itertools import tee
+
 # Open the file and read the text and make them all lowercase
 def read_file():
     with open('testsource.txt', 'r', encoding='utf-8') as f:
@@ -7,9 +7,8 @@ def read_file():
 
 
 def remove_symbols_and_create_array(f):
-    #remove all the symbols from the text using the string.punctuation constant
+    #remove all the symbols from the text using the string.punctuation
     #which contains all the common punctuation symbols.
-    # Make a translation table to remove punctuation
     text = f.translate(str.maketrans('','',string.punctuation))
     # Split the text into words by whitespace
     words = text.split()

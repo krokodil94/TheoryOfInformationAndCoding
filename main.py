@@ -3,13 +3,11 @@ import calculations
 import simulations
 
 file = preprocessing.read_file()
-
 words_array = preprocessing.remove_symbols_and_create_array(file)
 
 
 number_of_words = calculations.word_count(words_array)
-
-
+print(number_of_words)
 word_probs = calculations.calculate_word_probabilities(words_array)
 
 bigrams = preprocessing.get_bigrams(words_array)
