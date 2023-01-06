@@ -2,7 +2,7 @@ import string
 
 # Open the file and read the text and make them all lowercase
 def read_file():
-    with open('testsource.txt', 'r', encoding='utf-8') as f:
+    with open('test1.txt', 'r', encoding='utf-8') as f:
         return f.read().lower()
 
 
