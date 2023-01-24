@@ -3,7 +3,7 @@ Rač. vaja za Teorijo informacij in kodiranje
 
 Flowchart:
 
--Remove punctuation marks from the text.
+-Remove punctuation marks from the text.\n
 -Convert all the words to lowercase.
 -Split the text into a list of words.
 -Count the number of occurrences of each word.
